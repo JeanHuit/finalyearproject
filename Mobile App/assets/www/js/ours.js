@@ -14,15 +14,15 @@ $(document).ready(function(){
 
     $('form').submit(function(){
 
-       
+
         $('#lat').val(window.poslat);
         $('#lng').val(window.poslong);
-     
+
         $.ajax({
             type: 'POST',
-            url: 'http://192.168.1.100/GIS/save.php',
-           
-            data:$('form').serialize(), 
+            url: 'http:/xxx.xxx.xxx.xxx/GIS/save.php',
+
+            data:$('form').serialize(),
             success: function(){
 
                 alert('Your comment was successfully added');
