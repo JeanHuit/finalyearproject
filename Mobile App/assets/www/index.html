@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Incident Reporting</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+
+    <link rel="stylesheet" href="stylesheets/jquery.mobile.structure-1.2.0.css">
+    <link rel="stylesheet" href="stylesheets/jquery.mobile.theme-1.1.0.css">
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+    <link rel="stylesheet" href="stylesheets/ours.css">
+
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+    <!-- Scripts
+     ================================================== -->
+     <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script>
+    <script type="text/javascript" src="js/ours.js"></script>
+
+
+</head>
+<body> 
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+    <div data-role="page" >
+
+        <div data-role="header" data-theme="f">
+
+
+        </div>
+
+        <div data-role="content" id="content">
+            <form  enctype="multipart/form-data">
+                 <label>Accident Type:</label><select name="type">
+                <optgroup label="Accident type">
+                <option value="Rear End Collision">Rear End Collision</option>
+                <option value="Side Impact">Side Impact</option>
+                <option value="Head-On Collision">Head-On Collision</option>
+                <option value="Roll Over">Roll Over</option>
+                <option value="Run Off">Run Off</option>
+                <option value="Collision with an Animal">Collision with Animal</option>
+                <option value="Collision with Human">Collision with Human</option>
+                </optgroup>
+                <optgroup label="Incident">
+                    <option value="Wrongly-Parked Vehicle">Wrongly-Parked Vehicle</option>
+                </optgroup>
+            </select><br>
+
+                <label>Fatality:</label><select name="fatal">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Unsure">Unsure</option>
+                </select><br>
+                
+                <label>No. of Vehicles Involved:</label><select name="vehicles">
+                <option value="1-5">1-5</option>
+                <option value="5-10">5-10</option>
+                <option value="10+">10+</option>
+                </select><br>
+                
+                <label>Action Required:</label><select name="action">
+                <option value="Police,Ambulance,Tow truck">Police,Ambulance,Tow truck</option>
+                <option value="Ambulance,Tow truck">Ambulance,Tow truck</option>
+                <option value="Police,Ambulance">Police,Ambulance</option>
+                <option value="Police,Tow truck">Police,Tow truck</option>
+                </select><br>
+                
+                
+
+        
+
+
+               <div class="api-div" id="api-geolocation" name="latlng" >
+                    <div class="ui-grid-a">
+                        <div class="ui-block-b"></div>
+                    </div>
+                    <div id="cur_position"></div>
+                    <img id="map"/>
+                </div>
+
+                               <input style="display: none;" type="text" name="lat" id="lat">
+                                <input style="display: none;" type="text"  name="lng" id="lng">
+
+
+                <button  value="Submit">Send</button>
+
+
+
+            </form>
+        </div>
+
+        <div data-role="footer" data-theme="f">
+
+        </div>
+
+    </div>
+
+<!-- End Document
+================================================== -->
+
+	<script type="text/javascript" charset="utf-8" src="apis/connection.js"></script>
+	<script type="text/javascript" charset="utf-8" src="apis/geolocation.js"></script>
+	
+</body>
+</html>

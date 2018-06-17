@@ -1,0 +1,9 @@
+#mainpg{background-color: #7cfc00;height: 100%; overflow:hidden;}
+#menubar{background-color:#f5f5f5;top: 0; position: absolute; left:200px ;width: 300px; height:100%;padding-top:0; }
+menu{position: absolute;top: 50%;}
+font{font-family:helvetica;color:#000000;font-size: 120%;}
+menu li a {text-decoration: none;}
+img .displayed {display: block;margin-left: auto; margin-right: auto;}
+#pictureslide{background-color:black;position: absolute;float:right;display:inline-block;width:300%;height: 100%;}
+#content{text-align: center;}
+div{text-overflow: ellipsis;}
